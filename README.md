@@ -1,15 +1,35 @@
-graph TD
-    SC(Stoney Coin - 1000 Coins @ $0.01)
-    AB[Andy Boyd: CEO - 799 SC]
-    RB[Russle Baldridge: CTO - 150 SC]
-    W[Weston: Technical Advisor - 50 SC]
-    SP[Spencer Post: Consultant - 1 SC]
-    TBD1[TBD: Software Tech]
-    TBD2[TBD: Server Maintenance]
+---
+config:
+  theme: redux
+  look: classic
+  layout: elk
+---
+flowchart TB
+    %% Nodes
+    SC(("Stoney Coin<br>1000 Coins @ $1.0<br>3% Staking Bonus<br> Effort and Faith reward"))
+    AB["Andy Boyd: CEO<br>Visionary, Economics, Charisma, Biz accumen<br>799 SC"]
+    SP["Spencer Post: Consultant<br>Psychology, Econ, Cluster Computing<br>1 SC"]
+    
+    RB["Russle Baldridge: CTO<br>Technical, Hardware, Software<br>150 SC"]
+    W["Weston: Technical Advisor<br>Software, Server Setup<br>50 SC"]
+    
+    TBD1["TBD: Software Tech"]
+    TBD2["TBD: Server Maintenance"]
 
+    %% Connections
     SC --- AB
-    AB --- RB
-    AB --- W
-    AB -.-> SP
+    
+    %% Spencer connection: Linked only to Andy, positioned "up/right" 
+    SP -.-> AB
+
+    %% Lower Hierarchy
+    AB --- RB & W
     RB --- TBD1
     W --- TBD2
+
+    %% Styling
+    style SC fill:#00C853,stroke:#333,stroke-width:2px
+    style AB fill:#FFCDD2,stroke:#28a745,stroke-weight:2px
+    style RB fill:#FFF9C4
+    style W fill:#FFF9C4
+    style SP stroke-dasharray: 5 5,fill:#BBDEFB
