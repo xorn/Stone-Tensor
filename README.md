@@ -1,6 +1,3 @@
-# Stone-Tensor
-Stone Tensor LLC
-
 graph TD
     %% Node Definitions
     SC((Stoney Coin<br/>1000 Coins @ $0.01<br/>3% Staking Bonus))
